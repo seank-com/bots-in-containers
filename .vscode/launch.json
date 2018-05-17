@@ -1,0 +1,49 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [        
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Docker: Attach to Bot",
+            "address": "localhost",
+            "port": 9222,
+            "restart": true,
+            "timeout": 60000,
+            "cwd": "${workspaceRoot}/bot",
+            "localRoot": "${workspaceFolder}/bot",
+            "remoteRoot": "/home/bot",
+            "protocol": "inspector"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Docker: Launch Bot",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [ "run", "docker-debug" ],
+            "address": "localhost",
+            "port": 9222,
+            "restart": true,
+            "timeout": 60000,
+            "cwd": "${workspaceRoot}/bot",
+            "localRoot": "${workspaceFolder}/bot",
+            "remoteRoot": "/home/bot",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "protocol": "inspector"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Bot",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [ "run", "debug" ],
+            "cwd": "${workspaceRoot}/bot",
+            "port": 9222,
+            "restart": true,
+            "protocol": "inspector"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "Building & Debugging Bots in Containers",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "docker build -t mybot-debug .",
+    "release": "docker build --target release -t seankelly/mybot:latest .",
+    "debug": "nodemon --watch . --inspect-brk=0.0.0.0:9222 --nolazy index.js",
+    "docker-debug": "docker-compose -f ../docker-compose.yml up",
+    "start": "node index.js"
+  },
+  "author": "home@seank.com",
+  "license": "MIT",
+  "dependencies": {
+    "botbuilder": "^4.0.0-preview1.2",
+    "restify": "^7.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
+  }
+}

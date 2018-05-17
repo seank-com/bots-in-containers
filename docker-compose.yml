@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  bot:
+    build: ./bot
+    volumes:
+      - ./bot:/home/bot
+    ports:
+      - "3978:3978"
+      - "9222:9222"
