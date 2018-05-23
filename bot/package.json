@@ -7,7 +7,7 @@
     "build": "docker build -t mybot-debug .",
     "release": "docker build --target release -t seankelly/mybot:latest .",
     "debug": "nodemon --watch . --inspect-brk=0.0.0.0:9222 --nolazy index.js",
-    "docker-debug": "docker-compose -f ../docker-compose.yml up",
+    "docker-debug": "docker-compose -f ../docker-compose.yml up --detach",
     "start": "node index.js"
   },
   "author": "home@seank.com",

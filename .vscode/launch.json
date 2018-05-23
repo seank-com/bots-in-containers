@@ -19,19 +19,15 @@
         },
         {
             "type": "node",
-            "request": "launch",
+            "request": "attach",
             "name": "Docker: Launch Bot",
-            "runtimeExecutable": "npm",
-            "runtimeArgs": [ "run", "docker-debug" ],
-            "address": "localhost",
+            "preLaunchTask": "docker-compose-up",
             "port": 9222,
             "restart": true,
             "timeout": 60000,
             "cwd": "${workspaceRoot}/bot",
             "localRoot": "${workspaceFolder}/bot",
             "remoteRoot": "/home/bot",
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
             "protocol": "inspector"
         },
         {
