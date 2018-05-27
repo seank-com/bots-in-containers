@@ -1,4 +1,5 @@
-FROM node:10.1-alpine AS base
+
+FROM node:10.2-alpine AS base
 
 RUN apk update && apk add --no-cache tini
 
@@ -19,7 +20,7 @@ RUN apk update && apk add --no-cache \
 
 COPY package*.json ./
 
-RUN npm install --production
+RUN npm install
 
 COPY *.js ./
 
@@ -27,24 +28,11 @@ FROM base AS release
 
 COPY --from=builder /home/bot .
 
+ENV NODE_ENV=production
+
 EXPOSE 3978
 
 USER node
 
-CMD ["npm", "start"]
-
-FROM builder as builder-debug
-
-RUN npm install
-
-FROM release as debug
-
-COPY --from=builder-debug /home/bot .
-
-EXPOSE 3978
-EXPOSE 9222
-
-USER node
-
-CMD ["npm", "run", "debug"]
+CMD ["node", "index.js"]
 

@@ -21,6 +21,4 @@ $ docker build -t mybot .
 - [Bot Builder SDK v4 (Preview)](https://github.com/microsoft/botbuilder-js)
 - [Getting Started Wiki](https://github.com/Microsoft/botbuilder-js/wiki#getting-started)
 - [Docker Secrets](https://stackoverflow.com/questions/42139605/how-do-you-manage-secret-values-with-docker-compose-v3-1)
-- [VS Code Debugging Recipes]()
-- [Debugging TypeScript in VSCode (recipe)](https://github.com/Microsoft/vscode-recipes/tree/master/Docker-TypeScript)
 - [BotBuilder v4](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-create-templates?view=azure-bot-service-4.0)

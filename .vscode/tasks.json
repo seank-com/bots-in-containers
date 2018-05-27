@@ -7,11 +7,11 @@
             "label": "Docker Compose Up",
             "identifier": "docker-compose-up",
             "type": "process",
-            "command": "npm",
+            "command": "docker-compose",
             "options": {
                 "cwd": "${workspaceRoot}/bot/"
             },
-            "args": ["run", "docker-debug"],
+            "args": ["-f", "../docker-compose.yml", "up", "--detach"],
             "problemMatcher": []
         }
     ]

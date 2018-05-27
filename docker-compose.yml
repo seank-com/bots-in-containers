@@ -1,4 +1,4 @@
-version: "2"
+version: '3'
 
 services:
   bot:
@@ -8,3 +8,7 @@ services:
     ports:
       - "3978:3978"
       - "9222:9222"
+    environment:
+      NODE_ENV: development
+
+    command: /home/bot/node_modules/.bin/nodemon --watch . --inspect-brk=0.0.0.0:9222 --nolazy index.js
