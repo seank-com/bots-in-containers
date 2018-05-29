@@ -13,6 +13,30 @@
             },
             "args": ["-f", "../docker-compose.yml", "up", "--detach"],
             "problemMatcher": []
+        },
+        {
+            "label": "Docker Compose Down",
+            "identifier": "docker-compose-down",
+            "type": "process",
+            "command": "docker-compose",
+            "options": {
+                "cwd": "${workspaceRoot}/bot/"
+            },
+            "args": ["-f", "../docker-compose.yml", "down"],
+            "problemMatcher": []
+        },        
+        {
+            "label": "Docker Build",
+            "identifier": "docker-build",
+            "type": "process",
+            "command": "docker",
+            "options": {
+                "cwd": "${workspaceRoot}/bot/"
+            },
+            "args": ["build", "-t", "mybot", "."],
+            "problemMatcher": [],
+            "group": "build"
         }
+
     ]
 }

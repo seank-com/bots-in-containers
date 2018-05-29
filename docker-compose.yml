@@ -1,14 +1,14 @@
-version: '3'
+version: '2.3'
 
 services:
   bot:
     build: ./bot
     volumes:
-      - ./bot:/home/bot
+      - ./bot/src:/home/bot/src
     ports:
       - "3978:3978"
       - "9222:9222"
     environment:
       NODE_ENV: development
 
-    command: /home/bot/node_modules/.bin/nodemon --watch . --inspect-brk=0.0.0.0:9222 --nolazy index.js
+    command: /home/bot/node_modules/.bin/nodemon --watch src/ --inspect-brk=0.0.0.0:9222 --nolazy src/index.js

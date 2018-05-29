@@ -22,6 +22,7 @@
             "request": "attach",
             "name": "Docker: Launch Bot",
             "preLaunchTask": "docker-compose-up",
+            "postDebugTask": "docker-compose-down",
             "port": 9222,
             "restart": true,
             "timeout": 60000,

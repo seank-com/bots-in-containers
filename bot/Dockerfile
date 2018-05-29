@@ -22,7 +22,7 @@ COPY package*.json ./
 
 RUN npm install
 
-COPY *.js ./
+COPY src/*.js src/
 
 FROM base AS release
 
@@ -34,5 +34,5 @@ EXPOSE 3978
 
 USER node
 
-CMD ["node", "index.js"]
+CMD ["node", "src/index.js"]
 
