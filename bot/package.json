@@ -7,7 +7,7 @@
     "build": "docker build -t mybot .",
     "debug": "nodemon --watch src/ --inspect-brk=0.0.0.0:9222 --nolazy src/index.js",
     "docker-debug": "docker-compose -f ../docker-compose.yml up --detach",
-    "start": "node index.js"
+    "start": "node src/index.js"
   },
   "author": "home@seank.com",
   "license": "MIT",

@@ -27,7 +27,7 @@ server.post('/api/messages', (req, res) => {
 
             state.upTime = new Date().getTime() - state.startTime;
 
-            ctx.sendActivity(`${state.upTime}: You said "${ctx.activity.text}"`);
+            await ctx.sendActivity(`${state.upTime}: You said "${ctx.activity.text}"`);
         }
     });
 });
