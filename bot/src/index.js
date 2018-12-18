@@ -8,26 +8,19 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
 
 const adapter = new builder.BotFrameworkAdapter();
 
-const storage = new builder.MemoryStorage();
-const botState = new builder.BotState(storage, (ctx) => 'botState');
-
-adapter.use(botState);
+adapter.onTurnError = async (context, error) => {
+    console.error(`\n [onTurnError]: ${error}`);
+    await context.sendActivity(`Oops. Something went wrong!`);
+};
 
 server.post('/api/messages', (req, res) => {
-    adapter.processActivity(req, res, async ctx => {
-        console.log(`Incoming Activity of type "${ctx.activity.type}"`);
+    adapter.processActivity(req, res, async (ctx) => {
+        console.log(`Incoming Activity ${ctx}`);
         
-        if (ctx.activity.type === 'message') {
-
-            const state = botState.get(ctx);
-
-            if (!('startTime' in state)) {
-                state.startTime = new Date().getTime();
-            }
-
-            state.upTime = new Date().getTime() - state.startTime;
-
-            await ctx.sendActivity(`${state.upTime}: You said "${ctx.activity.text}"`);
+        if (ctx.activity.type === builder.ActivityTypes.Message) {
+            await ctx.sendActivity(`You said "${ctx.activity.text}"`);
+        } else {
+            await ctx.sendActivity(`[${ ctx.activity.type } event detected]`);
         }
     });
 });

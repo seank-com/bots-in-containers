@@ -11,4 +11,5 @@ services:
     environment:
       NODE_ENV: development
 
-    command: /home/bot/node_modules/.bin/nodemon --watch src/ --inspect-brk=0.0.0.0:9222 --nolazy src/index.js
+    #command: /home/bot/node_modules/.bin/nodemon --watch src/ --inspect-brk=0.0.0.0:9222 --nolazy src/index.js
+    command: /home/bot/node_modules/.bin/nodemon --watch src/ --inspect=0.0.0.0:9222 --nolazy src/index.js

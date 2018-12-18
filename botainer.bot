@@ -1,0 +1,16 @@
+{
+    "name": "botainer",
+    "description": "",
+    "services": [
+        {
+            "type": "endpoint",
+            "appId": "",
+            "appPassword": "",
+            "endpoint": "http://1ac5f5e5.ngrok.io/api/messages",
+            "id": "308adfa0-0269-11e9-98d4-0f11210afdfd",
+            "name": "development"
+        }
+    ],
+    "padlock": "",
+    "version": "2.0"
+}

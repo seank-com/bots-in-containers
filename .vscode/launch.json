@@ -22,7 +22,10 @@
             "request": "attach",
             "name": "Docker: Launch Bot",
             "preLaunchTask": "docker-compose-up",
-            "postDebugTask": "docker-compose-down",
+            // This would be ideal but VS code will run this everytime nodemon restarts
+            //"postDebugTask": "docker-compose-down",
+            // This doesn't work at all
+            //"stopOnEntry": true,
             "port": 9222,
             "restart": true,
             "timeout": 60000,
