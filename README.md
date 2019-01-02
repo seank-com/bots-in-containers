@@ -49,6 +49,13 @@ Both [nodejs](https://github.com/nodejs/docker-node/blob/master/docs/BestPractic
 
 **Tip**: _You can look at the dockerfiles of the images you are pulling. For example when looking at the entry for [node on DockerHub](https://hub.docker.com/_/node/) to the right of each tag is a link to the [Dockerfile](https://github.com/nodejs/docker-node/blob/2ecc9e8579f519ae3d267b5b497b8c04d6c7040d/10/alpine/Dockerfile) that built that image_
 
+A lot of tooling has gone into helping build bots especially around LUIS. A great place to start is this [blog post](https://aka.ms/luis-notes).
+
+**Current Investigation:**
+[Bot Builder Tools - Dispatch](https://github.com/Microsoft/botbuilder-tools/tree/master/packages/Dispatch) => [Prerequisites for .NET Core on Linux](https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites?tabs=netcore2x) =>
+[Node container](https://hub.docker.com/_/node)
+
+- [Conversational AI and Authentication](https://channel9.msdn.com/Shows/AI-Show/Conversational-AI-and-Authentication)
 
 - [How to specify Memory & CPU limit in version 3](https://github.com/docker/compose/issues/4513)
 - [Bot Builder SDK v4 (Preview)](https://github.com/microsoft/botbuilder-js)
