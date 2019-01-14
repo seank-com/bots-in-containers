@@ -55,6 +55,10 @@ A lot of tooling has gone into helping build bots especially around LUIS. A grea
 [Bot Builder Tools - Dispatch](https://github.com/Microsoft/botbuilder-tools/tree/master/packages/Dispatch) => [Prerequisites for .NET Core on Linux](https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites?tabs=netcore2x) =>
 [Node container](https://hub.docker.com/_/node)
 
+https://docs.microsoft.com/en-us/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0
+
+https://github.com/Microsoft/botbuilder-tools
+
 - [Conversational AI and Authentication](https://channel9.msdn.com/Shows/AI-Show/Conversational-AI-and-Authentication)
 
 - [How to specify Memory & CPU limit in version 3](https://github.com/docker/compose/issues/4513)
