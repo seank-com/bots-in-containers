@@ -1,0 +1,38 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+      {
+          "type": "TextBlock",
+          "size": "Large",
+          "weight": "Bolder",
+          "text": "Satisfaction Survey"
+      },
+      {
+          "type": "TextBlock",
+          "text": "Did we answer your question and make your life easier?",
+          "isSubtle": true
+      }
+  ],
+  "actions": [
+      {
+          "type": "Action.Submit",
+          "title": "You Rock",
+          "iconUrl": "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/thumbs-up.png",
+          "data": {
+              "x": "thumbsup"
+          }
+      },
+      {
+          "type": "Action.Submit",
+          "title": "You Suck",
+          "iconUrl": "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/thumbs-down.png",
+          "data": {
+              "x": "thumbsdown"
+          }
+      }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "fallbackText": "Did that answer your question and make your life easier?",
+  "speak": "Did that answer your question and make your life easier?"
+}

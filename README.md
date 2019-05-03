@@ -94,6 +94,8 @@ You can use the following command to build out a sample app
 $ npx -p yo -p generator-botbuilder -c 'yo botbuilder'
 ```
 
+[Adaptive Cards Designer](https://adaptivecards.io/designer)
+
 https://github.com/Microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/14.nlp-with-dispatch
 
 https://docs.microsoft.com/en-us/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0
