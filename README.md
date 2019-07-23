@@ -46,7 +46,9 @@ $ docker build -t mybot .
 ## Development Notes
 
 ```bash
-$ docker run -it --rm -v /Users/seank/Development/botbuilder-samples/:/root/botbuilder-samples bot-tools /bin/bash
+$ cd tools
+$ docker build -t bot-tools .
+$ docker run -it --rm -v /Users/seank/Development/:/root/Development/ bot-tools
 ```
 
 ```bash
