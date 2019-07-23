@@ -23,3 +23,6 @@ WORKDIR /root
 COPY azure-cli.list /etc/apt/sources.list.d/azure-cli.list
 RUN apt-key --keyring /etc/apt/trusted.gpg.d/Microsoft.gpg adv --keyserver packages.microsoft.com --recv-keys BC528686B50D79E339D3721CEB3E94ADBE1229CF
 RUN apt-get update && apt-get install -y azure-cli powershell
+RUN ln -s /root/.dotnet/tools/luisgen /usr/local/bin/luisgen
+
+CMD [ "/bin/bash" ]
