@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "botbuilder": "^4.2.0",
-    "restify": "^7.3.0"
+    "restify": "^10.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
